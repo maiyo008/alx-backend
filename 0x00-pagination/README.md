@@ -22,3 +22,22 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 [use this data file](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/misc/2020/5/7d3576d97e7560ae85135cc214ffe2b3412c51d7.csv?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230722%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230722T172656Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=dd37dc80a9685c07b49dccf31603e62f903d7c0f1406383f3a6ee6d08a02cb83) for your project
 
 ## Tasks
+### Task 0. Simple helper function
+<Details>
+Write a function named index_range that takes two integer arguments page and page_size.
+
+The function should return a tuple of size two containing a start index and an end index corresponding to the range of indexes to return in a list for those particular pagination parameters.
+
+Page numbers are 1-indexed, i.e. the first page is page 1.
+
+Sample output
+```
+root@2c462bd13a86:~/alx-backend/0x00-pagination# chmod u+x 0-main.py
+root@2c462bd13a86:~/alx-backend/0x00-pagination# ./0-main.py
+<class 'tuple'>
+(0, 7)
+<class 'tuple'>
+(30, 45)
+```
+</Details>
+
