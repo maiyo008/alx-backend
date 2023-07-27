@@ -1,34 +1,35 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
-FIFO Caching implementation
+LRU Caching implementation
 """
-from collections import OrderedDict
 BaseCaching = __import__('base_caching').BaseCaching
 
 
-class FIFOCache(BaseCaching):
+class LRUCache(BaseCaching):
     """
-    FIFO Caching
+    LRU Caching
     """
+
     def __init__(self):
-        """
-        Initialization
-        """
         super().__init__()
+        self.usage_order = []
 
     def put(self, key, item):
         """
-        Add to the cache
-        Implement FIFO replacement
+        Updates cache
+        Implement LRU replacement
         """
         if key is None or item is None:
             return
-        if len(self.cache_data) >= self.MAX_ITEMS:
+        if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
             if key not in self.cache_data:
-                first_key = next(iter(self.cache_data))
-                self.cache_data.pop(first_key)
-                print("DISCARD: {}".format(first_key))
+                lru_key = self.usage_order.pop(0)
+                self.cache_data.pop(lru_key)
+                print("DISCARD: {}".format(lru_key))
         self.cache_data[key] = item
+        if key in self.usage_order:
+            self.usage_order.remove(key)
+        self.usage_order.append(key)
 
     def get(self, key):
         """
