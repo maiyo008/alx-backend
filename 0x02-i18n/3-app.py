@@ -2,7 +2,7 @@
 """
 Get locale from request
 """
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_babel import Babel
 
 
@@ -40,7 +40,7 @@ def index():
     """
     Render index html file
     """
-    return render_template('2-index.html')
+    return render_template('3-index.html')
 
 
 if __name__ == '__main__':
