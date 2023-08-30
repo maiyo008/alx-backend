@@ -177,3 +177,64 @@ Hash value:
 }
 ```
 </Details>
+
+### Task 5
+* Subscribe client
+* Publish client 
+files: `5-subscriber.js` and `5-publisher.js`
+Sample output
+<Details>
+
+On terminal 1(Subscriber) before message is sent
+```
+root@2c462bd13a86:~/alx-backend/0x03-queuing_system_in_js# npm run dev 5-subscriber.js 
+
+> queuing_system_in_js@1.0.0 dev /root/alx-backend/0x03-queuing_system_in_js
+> nodemon --exec babel-node --presets @babel/preset-env "5-subscriber.js"
+
+[nodemon] 2.0.22
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `babel-node --presets @babel/preset-env 5-subscriber.js`
+Redis client connected to the server
+```
+
+on terminal 2(Publisher)
+```
+root@2c462bd13a86:~/alx-backend/0x03-queuing_system_in_js# npm run dev 5-publisher.js 
+
+> queuing_system_in_js@1.0.0 dev /root/alx-backend/0x03-queuing_system_in_js
+> nodemon --exec babel-node --presets @babel/preset-env "5-publisher.js"
+
+[nodemon] 2.0.22
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `babel-node --presets @babel/preset-env 5-publisher.js`
+Redis client connected to the server
+About to send Holberton Student #1 starts course
+About to send Holberton Student #2 starts course
+About to send KILL_SERVER
+About to send Holberton Student #3 starts course
+```
+
+Back to terminal 1(Subscriber) after message is sent
+```
+root@2c462bd13a86:~/alx-backend/0x03-queuing_system_in_js# npm run dev 5-subscriber.js 
+
+> queuing_system_in_js@1.0.0 dev /root/alx-backend/0x03-queuing_system_in_js
+> nodemon --exec babel-node --presets @babel/preset-env "5-subscriber.js"
+
+[nodemon] 2.0.22
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `babel-node --presets @babel/preset-env 5-subscriber.js`
+Redis client connected to the server
+Holberton Student #1 starts course
+Holberton Student #2 starts course
+KILL_SERVER
+[nodemon] clean exit - waiting for changes before restart
+```
+</Details>
