@@ -80,3 +80,31 @@ Redis client connected to the server
 ^C
 ```
 </Details>
+
+### Task 2
+* Set values to Redis
+* Get values from Redis
+file: `1-redis_op.js`
+
+Sample output
+<Details>
+
+```
+root@2c462bd13a86:~/alx-backend/0x03-queuing_system_in_js# npm run dev 1-redis_op.js 
+
+> queuing_system_in_js@1.0.0 dev /root/alx-backend/0x03-queuing_system_in_js
+> nodemon --exec babel-node --presets @babel/preset-env "1-redis_op.js"
+
+[nodemon] 2.0.22
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `babel-node --presets @babel/preset-env 1-redis_op.js`
+Redis client connected to the server
+School
+Reply: OK
+100
+[nodemon] clean exit - waiting for changes before restart
+^C
+```
+</Details>
