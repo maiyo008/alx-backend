@@ -296,3 +296,34 @@ Notification job created: 3
 Notification job completed
 ```
 </Details>
+
+### Task 8
+* Track progress and errors with Kue: Create the Job creator
+File: `7-job_creator.js`
+Sample Output
+<Details>
+
+```
+root@2c462bd13a86:~/alx-backend/0x03-queuing_system_in_js# npm run dev 7-job_creator.js 
+
+> queuing_system_in_js@1.0.0 dev /root/alx-backend/0x03-queuing_system_in_js
+> nodemon --exec babel-node --presets @babel/preset-env "7-job_creator.js"
+
+[nodemon] 2.0.22
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `babel-node --presets @babel/preset-env 7-job_creator.js`
+Notification job created: 4
+Notification job created: 5
+Notification job created: 6
+Notification job created: 7
+Notification job created: 8
+Notification job created: 9
+Notification job created: 10
+Notification job created: 11
+Notification job created: 12
+Notification job created: 13
+Notification job created: 14
+```
+</Details>
