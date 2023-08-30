@@ -260,3 +260,39 @@ root@2c462bd13a86:~/alx-backend/0x03-queuing_system_in_js# npm run dev 6-job_cre
 Notification job created: 1
 ```
 </Details>
+
+### Task 7
+* Create a job processor
+File: `6-job_processor.js`
+Sample output
+<Details>
+
+Terminal 2 (Job processor)
+```
+ nodemon --exec babel-node --presets @babel/preset-env "6-job_processor.js"
+
+[nodemon] 2.0.22
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `babel-node --presets @babel/preset-env 6-job_processor.js`
+[nodemon] restarting due to changes...
+[nodemon] starting `babel-node --presets @babel/preset-env 6-job_processor.js`
+Job processor is running...
+[nodemon] restarting due to changes...
+[nodemon] starting `babel-node --presets @babel/preset-env 6-job_processor.js`
+Sending notification to 0726987451, with message: Hello
+Sending notification to 0726987451, with message: Hello
+```
+
+terminal 1 (Job creator)
+```
+[nodemon] 2.0.22
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `babel-node --presets @babel/preset-env 6-job_creator.js`
+Notification job created: 3
+Notification job completed
+```
+</Details>
