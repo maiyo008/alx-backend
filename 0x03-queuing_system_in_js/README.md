@@ -327,3 +327,95 @@ Notification job created: 13
 Notification job created: 14
 ```
 </Details>
+
+### Task 9
+* Track progress and errors with Kue by creating the Job processor
+File: `7-job_processor.js`
+Sample output
+<Details>
+
+Terminal 2(Job Processor)
+```
+root@2c462bd13a86:~/alx-backend/0x03-queuing_system_in_js# npm run dev 7-job_processor.js 
+
+> queuing_system_in_js@1.0.0 dev /root/alx-backend/0x03-queuing_system_in_js
+> nodemon --exec babel-node --presets @babel/preset-env "7-job_processor.js"
+
+[nodemon] 2.0.22
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `babel-node --presets @babel/preset-env 7-job_processor.js`
+Sending notification to 4153518743, with message: This is the code 4321 to verify your account
+Sending notification to 4153538781, with message: This is the code 4562 to verify your account
+Sending notification to 4153118782, with message: This is the code 4321 to verify your account
+Sending notification to 4153718781, with message: This is the code 4562 to verify your account
+Sending notification to 4159518782, with message: This is the code 4321 to verify your account
+Sending notification to 4158718781, with message: This is the code 4562 to verify your account
+Sending notification to 4153818782, with message: This is the code 4321 to verify your account
+Sending notification to 4154318781, with message: This is the code 4562 to verify your account
+Sending notification to 4151218782, with message: This is the code 4321 to verify your account
+Sending notification to 4153518743, with message: This is the code 4321 to verify your account
+Sending notification to 4153538781, with message: This is the code 4562 to verify your account
+Sending notification to 4153118782, with message: This is the code 4321 to verify your account
+Sending notification to 4153718781, with message: This is the code 4562 to verify your account
+Sending notification to 4159518782, with message: This is the code 4321 to verify your account
+Sending notification to 4158718781, with message: This is the code 4562 to verify your account
+Sending notification to 4153818782, with message: This is the code 4321 to verify your account
+Sending notification to 4154318781, with message: This is the code 4562 to verify your account
+Sending notification to 4151218782, with message: This is the code 4321 to verify your account
+^C
+```
+
+Terminal 1 (Job creator)
+```
+[nodemon] 2.0.22
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `babel-node --presets @babel/preset-env 7-job_creator.js`
+Notification job created: 15
+Notification job created: 16
+Notification job created: 17
+Notification job created: 18
+Notification job created: 19
+Notification job created: 20
+Notification job created: 21
+Notification job created: 22
+Notification job created: 23
+Notification job created: 24
+Notification job created: 25
+Notification job 15 0% complete
+Notification job 15 failed: Phone number 4153518780 is blacklisted
+Notification job 16 0% complete
+Notification job 16 failed: Phone number 4153518781 is blacklisted
+Notification job 17 0% complete
+Notification job 17 50% complete
+Notification job 17 completed
+Notification job 18 0% complete
+Notification job 18 50% complete
+Notification job 18 completed
+Notification job 19 0% complete
+Notification job 19 50% complete
+Notification job 19 completed
+Notification job 20 0% complete
+Notification job 20 50% complete
+Notification job 20 completed
+Notification job 21 0% complete
+Notification job 21 50% complete
+Notification job 21 completed
+Notification job 22 0% complete
+Notification job 22 50% complete
+Notification job 22 completed
+Notification job 23 0% complete
+Notification job 23 50% complete
+Notification job 23 completed
+Notification job 24 0% complete
+Notification job 24 50% complete
+Notification job 24 completed
+Notification job 25 0% complete
+Notification job 25 50% complete
+Notification job 25 completed
+^C
+```
+</Details>
