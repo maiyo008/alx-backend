@@ -108,3 +108,22 @@ Reply: OK
 ^C
 ```
 </Details>
+
+### Task 3
+* Async operations on getting data from Redis
+File: `2-redis_op_async.js`
+Sample output
+<Details>
+
+```
+[nodemon] clean exit - waiting for changes before restart
+[nodemon] restarting due to changes...
+[nodemon] starting `babel-node --presets @babel/preset-env 2-redis_op_async.js`
+Redis client connected to the server
+Reply: OK
+School
+100
+[nodemon] clean exit - waiting for changes before restart
+^C
+```
+</Details>
