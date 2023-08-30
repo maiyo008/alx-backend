@@ -238,3 +238,25 @@ KILL_SERVER
 [nodemon] clean exit - waiting for changes before restart
 ```
 </Details>
+
+### Task 6
+* Create a queue using Kue
+File: `6-job_creator.js`
+
+Sample output
+<Details>
+
+```
+root@2c462bd13a86:~/alx-backend/0x03-queuing_system_in_js# npm run dev 6-job_creator.js 
+
+> queuing_system_in_js@1.0.0 dev /root/alx-backend/0x03-queuing_system_in_js
+> nodemon --exec babel-node --presets @babel/preset-env "6-job_creator.js"
+
+[nodemon] 2.0.22
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `babel-node --presets @babel/preset-env 6-job_creator.js`
+Notification job created: 1
+```
+</Details>
