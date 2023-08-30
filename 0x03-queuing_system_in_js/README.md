@@ -127,3 +127,53 @@ School
 ^C
 ```
 </Details>
+
+### Task 4 
+* Create Hash
+* Display Hash
+File: `4-redis_advanced_op.js`
+Sample output
+<Details>
+
+```
+[nodemon] restarting due to changes...
+[nodemon] starting `babel-node --presets @babel/preset-env 4-redis_advanced_op.js`
+Redis client connected to the server
+Reply for Portland: 1
+Reply for Seattle: 1
+Reply for New York: 1
+Reply for Bogota: 1
+Reply for Cali: 1
+Reply for Paris: 1
+Hash value:
+{
+  Portland: '50',
+  Seattle: '80',
+  'New York': '20',
+  Bogota: '20',
+  Cali: '40',
+  Paris: '2'
+}
+```
+
+**Note that when the same program is repeated we have values of 0 for the replies
+
+```
+Redis client connected to the server
+Reply: 0
+Reply: 0
+Reply: 0
+Reply: 0
+Reply: 0
+Reply: 0
+Hash value:
+{
+  Portland: '50',
+  Seattle: '80',
+  'New York': '20',
+  Bogota: '20',
+  Cali: '40',
+  Paris: '2'
+}
+```
+</Details>
